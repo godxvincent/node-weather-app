@@ -21,7 +21,8 @@ const foreCast = (longitude, latitude, callback) => {
         const data = {
           descripcion_clima: body.current.weather_descriptions[0],
           temperatura: body.current.temperature,
-          sensacion: body.current.feelslike
+          sensacion: body.current.feelslike,
+          humedad: body.current.humidity
         };
 
         callback(null, data);

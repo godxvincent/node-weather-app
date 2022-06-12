@@ -10,8 +10,7 @@
   - [2.5. Running unit tests](#25-running-unit-tests)
   - [2.6. Contributing](#26-contributing)
   - [2.7. Further Reading / Useful Links](#27-further-reading--useful-links)
-- [Comandos utiles](#comandos-utiles)
-- [Links](#links)
+- [3. Links](#3-links)
 
 # 2. node-apps
 
@@ -44,11 +43,14 @@ heroku create -a godxvincent-weatherapp
 # If for some reason the project doesn't create the remote run this command
 heroku git:remote -a godxvincent-weatherapp
 
-# To deploy the app in heroku commit your changes and push the changes
+# To deploy the app in heroku commit your changes and push the changes to heroku
 git push heroku master
 
+# To see what remotes exist
+git remote
 
-
+# To see app logs
+heroku logs
 
 ```
 
@@ -74,8 +76,6 @@ If you find this repo useful here's how you can help:
 - [NPM](https://www.npmjs.com/)
 - [Heroku](https://www.heroku.com/)
 
-# Comandos utiles
-
-# Links
+# 3. Links
 
 Link del API del [clima](https://weatherstack.com/)

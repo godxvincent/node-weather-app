@@ -24,8 +24,16 @@ weatherForm.addEventListener("submit", e => {
       if (data.errorMessage) {
         messageOne.textContent = data.errorMessage;
       } else {
-        const mensaje = `La temperatura actual es ${data.forecast.temperatura} 
-              pero se siente una temperatura de ${data.forecast.sensacion}`;
+        let mensaje = "";
+        if (data.forecast.temperatura != data.forecast.sensacion) {
+          mensaje = `La temperatura actual es ${data.forecast.temperatura} 
+              pero se siente una temperatura de ${data.forecast.sensacion}.`;
+        } else {
+          mensaje = `La temperatura real y la percibida es ${data.forecast.temperatura}.`;
+        }
+        mensaje =
+          mensaje + " La humedad actual es " + data.forecast.humedad + "%.";
+
         messageOne.textContent = data.location;
         messageTwo.textContent = mensaje;
       }
